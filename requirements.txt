@@ -3,3 +3,4 @@ python-dotenv
 flask_pymongo
 flask_restful
 pymongo[srv]
+gunicorn
