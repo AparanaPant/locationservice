@@ -23,6 +23,6 @@ class AreaResource(Resource):
     # todo:only allow disable:true keyword for patch
     def patch(self, area_id):
         query = {"_id": ObjectId(area_id)}
-        area = mongo.db.cities.update_one(query, {"$set": request.json})
+        area = mongo.db.areas.update_one(query, {"$set": request.json})
         return serialize_one(mongo.db.areas.find_one(area.upserted_id))
 
